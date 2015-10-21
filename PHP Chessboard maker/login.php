@@ -1,6 +1,6 @@
 <?php //login.php
-$db_hostname = 'csmath-cuda';
-$db_database = 'antrachtman';
-$db_username = 'antrachtman';
-$db_password = 'antrachtman';
+$db_hostname = '';
+$db_database = '';
+$db_username = '';
+$db_password = '';
 ?>
