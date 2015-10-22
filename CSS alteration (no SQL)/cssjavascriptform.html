@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="try">
+  
+  <form id ="divfrm" action="">
+  Div: <select name="div:" size=1>
+        <option value='try'>try</option>
+        <option value='demo'>demo</option>
+       </select>
+  </form>
+
+  <br>
+       
+  <form id="frm1" action="form_action.asp">
+  Position: <select name="position:" size=1>
+    <option value='relative'>relative</option>
+    <option value='absolute'>absolute</option>
+    <option value='fixed'>fixed</option>
+  </select><br>
+  top: <select name="top:" size=1>
+    <option value='10px'>10px</option>
+    <option value='100px'>100px</option>
+    <option value='120px'>120px</option>
+  </select><br>
+  left: <select name="left:" size=1>
+    <option value='10px'>10px</option>
+    <option value='100px'>100px</option>
+    <option value='120px'>120px</option>
+  </select><br>
+  </form>
+
+  <p>Click "Try it" to move the specified div, and display the value of
+  each element in the form. </p>
+  <p> demo - where the text is displayed </p>
+  <p> try  - the location of the form and the button </p>
+
+  <button onclick="myFunction()">Try it</button>
+</div>
+
+<div id="demo"></div>
+
+<script>
+function myFunction() {
+var v = document.getElementById("divfrm");
+var divid = "";
+var j;
+for (j = 0; j < v.length ;j++) {
+
+if(v.elements[j].name == "div:") {
+divid = v.elements[j].value;
+}
+}
+var x = document.getElementById("frm1");
+var text = "";
+var i;
+for (i = 0; i < x.length ;i++) {
+
+text += x.elements[i].name;
+text += x.elements[i].value + ";";
+}
+// x.style.position = x.elements[0].value;
+// x.style.top = '10px';
+// x.style.left = '100px';
+// x.style.width =  '360px';
+//y.setAttribute('style','height: 10px');
+//  x.style.background = 'orange';
+//  x.style.border = 'solid 1px black';
+//y.setAttribute('style','solid 1px black');
+//y.setAttribute('style','left: 100px');
+//y.setAttribute('style','border-width:1px');
+//y.setAttribute('style','border-style: solid');
+//y.setAttribute('style','border-color: #000');
+var z = document.getElementById(divid);
+z.setAttribute('style',text);
+var y = document.getElementById("demo");
+y.innerHTML = text;
+
+
+}
+</script>
+
+</body>
+</html>

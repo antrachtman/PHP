@@ -1,0 +1,29 @@
+#directory{
+
+	position:absolute;
+	top: 80px;
+	left: 0px;
+	background-color: yellow;
+
+	  }
+
+#upload{
+		
+		position:relative;
+		text-align:center;
+		left: auto;
+		top:0px;
+		color: white;
+
+       }
+
+body{
+	background-color: red;
+    }
+
+
+#video  {
+	position:relative;
+	text-align:center;
+	left: auto;
+	}
